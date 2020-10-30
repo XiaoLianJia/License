@@ -14,6 +14,8 @@ public class LicenseVerifierTest {
 
     private LicenseVerifier verifier = new LicenseVerifier();
 
+    private LicenseVerifier verifier2 = new LicenseVerifier("/licenseVerify.properties");
+
     @Test
     public void install() throws Exception {
         verifier.install();
@@ -22,5 +24,15 @@ public class LicenseVerifierTest {
     @Test
     public void verify() throws Exception {
         System.out.println(verifier.verify());
+    }
+
+    @Test
+    public void install2() throws Exception {
+        verifier2.install();
+    }
+
+    @Test
+    public void verify2() throws Exception {
+        System.out.println(verifier2.verify());
     }
 }

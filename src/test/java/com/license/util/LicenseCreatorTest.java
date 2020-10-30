@@ -17,4 +17,10 @@ public class LicenseCreatorTest {
         LicenseCreator creator = new LicenseCreator();
         creator.create();
     }
+
+    @Test
+    public void create2() throws Exception {
+        LicenseCreator creator = new LicenseCreator("/licenseCreate.properties");
+        creator.create();
+    }
 }
