@@ -12,27 +12,23 @@ import org.junit.Test;
  */
 public class LicenseVerifierTest {
 
-    private LicenseVerifier verifier = new LicenseVerifier();
-
-    private LicenseVerifier verifier2 = new LicenseVerifier("/licenseVerify.properties");
-
     @Test
     public void install() throws Exception {
-        verifier.install();
+        new LicenseVerifier().install();
     }
 
     @Test
     public void verify() throws Exception {
-        System.out.println(verifier.verify());
+        System.out.println(new LicenseVerifier().verify());
     }
 
     @Test
     public void install2() throws Exception {
-        verifier2.install();
+        new LicenseVerifier("/licenseVerify.properties").install();
     }
 
     @Test
     public void verify2() throws Exception {
-        System.out.println(verifier2.verify());
+        System.out.println(new LicenseVerifier("/licenseVerify.properties").verify());
     }
 }

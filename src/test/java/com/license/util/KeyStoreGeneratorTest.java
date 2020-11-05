@@ -12,27 +12,23 @@ import org.junit.Test;
  */
 public class KeyStoreGeneratorTest {
 
-    private KeyStoreGenerator generator = new KeyStoreGenerator();
-
-    private KeyStoreGenerator generator2 = new KeyStoreGenerator("/keyStoreGenerate.properties");
-
     @Test
     public void generatePrivateKeysStore() throws Exception {
-        generator.generatePrivateKeysStore();
+        new KeyStoreGenerator().generatePrivateKeysStore();
     }
 
     @Test
     public void generatePublicCertsStore() throws Exception {
-        generator.generatePublicCertsStore();
+        new KeyStoreGenerator().generatePublicCertsStore();
     }
 
     @Test
     public void generatePrivateKeysStore2() throws Exception {
-        generator2.generatePrivateKeysStore();
+        new KeyStoreGenerator("/keyStoreGenerate.properties").generatePrivateKeysStore();
     }
 
     @Test
     public void generatePublicCertsStore2() throws Exception {
-        generator2.generatePublicCertsStore();
+        new KeyStoreGenerator("/keyStoreGenerate.properties").generatePublicCertsStore();
     }
 }
